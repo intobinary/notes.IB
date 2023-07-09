@@ -18,6 +18,7 @@ html {background-color:#03EA60;}
 #query,
 .search-result-item p strong { color:#03EA60;}
 
+.main-header-category,
 .main-header-logo-title,
 .main-content-share-list { background-color: black;}
 
@@ -35,6 +36,7 @@ html {background-color:#03EA60;}
 .search-header,
 .u-searchForm-query,
 .u-searchForm-result { background-color: white; }
+.main-header-category,
 .main-header-logo-title,
 .main-content-share-button,
 .u-submit { color: white; }
@@ -50,6 +52,7 @@ body{font-family:"OCR A", serif;}
 		
 .search-header,
 .search-footer { text-align: center; }
+.main-header-hgroup { text-align: right; }
 
 .u-submit {
 	font-variant: small-caps;
@@ -122,13 +125,12 @@ html, body {
 	margin: 10vh 0;
 }
 .main-content-article  {
-	height: 100vh;
+	min-height: 100vh;
 	padding: 2em;
 }
-.main-content-article-p {
+.main-content-article-p,
+.main-content-article p {
 	padding: 1em 0;
-}
-.main-content-share-p {
 	padding: 1em 2em;
 }
 .main-content-share-button {
@@ -139,6 +141,13 @@ html, body {
 .main-header {
 //		display: inline-block;
 }
+.main-header-category {
+  display: inline-block;
+  padding: .5em;
+}
+.main-header-logo {
+  margin-bottom: 50vh;
+}
 .main-header-logo-img {
 	width: 15em;
 	padding: 1em 2em;
@@ -148,7 +157,6 @@ html, body {
 }
 .main-header-title {
 	padding: .5em 1em;
-	margin-top: 50vh;
 }
 .main-footer {
 	padding: 1em 2em;
