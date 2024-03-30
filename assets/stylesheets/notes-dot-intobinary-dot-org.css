@@ -389,6 +389,33 @@ html {
 /*** END HACKS ***/
 		
 /*** BETAs ***/
+.main-content-share-button {
+	color: transparent;
+//	text-indent: -9999px;
+	border-radius: initial !important;
+	
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 90%;
+}
+	.main-content-share-list-item:nth-child(1) .main-content-share-button { background-image: url("/assets/images/icon_whatsapp_black.png"); }
+	.main-content-share-list-item:nth-child(2) .main-content-share-button { background-image: url("/assets/images/icon_email_black.png"); }
+	.main-content-share-list-item:nth-child(3) .main-content-share-button { background-image: url("/assets/images/icon_facebook_black.png"); }
+	.main-content-share-list-item:nth-child(4) .main-content-share-button { background-image: url("/assets/images/icon_linkedin_black.png"); }
+	
+.main-content-share-list {
+	padding: .25em;
+	background-color: white;
+}
+.main-content-share-list-item {
+	margin: .25em;
+	
+	border-width: .1em; border-style: solid;
+	border-color: transparent;
+}
+.main-content-share-list-item:hover,
+.main-content-share-list-item:active,
+.main-content-share-list-item:focus { border-color: black; }
 /*** BETAs ***/
 		
 /*** TO DELETE ***/
