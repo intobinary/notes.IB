@@ -1,0 +1,65 @@
+---
+layout: default
+---
+	<main>
+		<nav class="nav d-midWrap">
+			<hgroup class="nav-hgroup">
+				<figure class="nav-hgroup-logo d-cssCentered"><img src="/assets/images/logo_full_black.png" class="nav-hgroup-logo-img" /></figure>
+				<h3 class="nav-hgroup-title d-cssCentered">{{ page.author-key | replace: '-', ' ' }}'s <br />Notes</h3>
+			</hgroup>
+		</nav>
+		
+		<header class="header d-midWrap">
+			<h1 class="header-title">{{ page.title }}</h1>
+			
+			<div class="header-tags">{% assign vTags = page.tags %}{% for vTag in vTags %}
+				<span class="header-tags-span">{{ vTag }}</span>{% endfor %}
+			</div>
+			
+			<div class="header-author">
+				<h2 class="header-author-quote d-cssCentered">{{ page.quote }}</h2>
+				
+				<figure class="header-author-portrait">
+					<img src="/assets/images/placeholder-1x1.png" class="header-author-portrait-img" style="background-image: url('/assets/images/authors/{{ page.author-key | dowcase }}.png');" />
+				</figure>
+			</div>
+			
+			<div class="header-stats">
+				{% for file in site.data.data %}{% for data in file %}<div class="header-stats-box">
+					<span class="header-stats-box-span">{{ data[0] }}</span>
+					<span class="header-stats-box-span">{{ data[1] }}</span>
+				</div>{% endfor %}{% endfor %}
+			</div>
+		</header>
+		
+		<section class="content d-midWrap">
+			<div class="content-note">
+				<p class="content-note-p">Edge computing has emerged as a solution to meet the demands of real-time data processing and communication, but challenges persist in minimizing latency and improving efficiency.</p>
+				<p class="content-note-p">The proposed protocol utilizes adaptive routing techniques and efficient data encoding to streamline communication between nodes. Initial testing highlights a notable reduction in round-trip latency, especially in high-demand scenarios such as video streaming and industrial automation. The design ensures compatibility and industrial automation.</p>
+				<p class="content-note-p">Industries such as healthcare, transportation, and smart cities rely heavily on real-time data. By addressing key bottlenecks, in edge communication, the new protocol provides a pathway to faster and more reliable decentralized systems. The innovation marks a critical step forward in meeting the growing demands of edge computing environments.</p>
+			</div>
+			
+			<aside class="content-aside">
+				<figure class="content-aside-linkedin">
+					<img src="/assets/images/linkedin.png" class="content-aside-linkedin-img" />
+					<!--
+					<img src="/assets/images/linkedins/{{ page.url | remove: '/' }}.png" class="content-aside-linkedin-img" />
+					-->
+					<figcaption class="content-aside-linkedin-text d-cssCentered"><p>
+						Open to work! Open to collaborate!
+						<br /><br />
+						<a href="">Connect on Linkedin</a>
+					</p></figcaption>
+				</figure>
+			</aside>
+		</section>
+		
+		<section class="footer d-midWrap">
+			<div class="footer-share">
+				<a href="https://www.linkedin.com/shareArticle?url=https://intobinary.org{{ page.url }}" class="footer-share-span">Share on Linkedin</a>
+				<a href="mailto:?subject='{{ page.title }}'&body='{{ page.quote }}. Read the full article on https://intobinary.org{{ page.url }}'" class="footer-share-span">Email</a>
+			</div>
+			
+			<p class="footer-copyrights">&copy; 2024 <a href="https://intobinary.org">Into Binary</a>. All rights reserved.</p>
+		</section>
+	</main>

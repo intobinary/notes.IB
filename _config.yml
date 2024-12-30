@@ -1,0 +1,12 @@
+collections:
+  notes:
+    output: true
+    permalink: /:path/
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "notes"
+    values:
+      layout: "notes"

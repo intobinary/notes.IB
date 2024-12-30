@@ -1,0 +1,46 @@
+---
+layout: default
+---
+		<main>
+			<section class="search">
+				<nav class="search-nav">
+					<h1 class="search-nav-h1">Hello, World! Read out notes from <a href="https://intobinary.org"><img src="http://localhost:4000/assets/images/logo-words_black_www-dot-intobinary-dot-org.png" alt="Into Binary" /></a>'s mentor and students!</h1>
+				</nav>
+				
+				<section class="search-content">
+					
+			<form class="u-searchForm js-searchForm" role="form" onsubmit="return false">
+				<div class="u-searchForm-query">
+					<div class="search-wrapper search-container">
+						<input type="search" name="q" class="u-searchForm-input u-input js-searchForm-input" placeholder="Type in what you're looking for..." autocomplete="off" required />
+					  <div class="search-error is-hidden"></div>
+					</div>
+					
+					<input type="submit" class="u-searchForm-submit u-submit js-searchForm-submit" value="search" />
+					<button class="button u-searchForm-clear u-submit js-searchForm-clear">Close</button>
+				</div>
+				
+				<div class="u-searchForm-result js-searchForm-result">
+					<div class="search-results is-hidden">
+					  <div id="search-nav">
+						<div class="search-query search-query-left">search term: <span id="query"></span></div>
+						<div class="search-query search-query-right"><span id="results-count"></span><span id="results-count-text"></span></div>
+					  </div>
+					  
+					  <ul></ul>
+					  
+					  <button class="button u-searchForm-clear u-submit">Close Search Results</button>
+					</div>
+				</div>
+			  </form>
+				</section>
+				
+				<footer class="search-footer is-hidden js-search-footer">
+					&copy; Copyrights 2022 <a href="Into Binary">Into Binary</a>. All rights reserved.
+				</footer>
+			</section>
+		</main>
+	
+	<script src="/assets/scripts/lunr.js"></script>
+	<script src="/assets/scripts/notes-dot-intobinary-dot-org.js"></script>
+	<script src="/assets/scripts/notes-dot-intobinary-dot-org__search.js"></script>
