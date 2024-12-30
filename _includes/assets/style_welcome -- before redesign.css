@@ -10,7 +10,7 @@ body{
 /*** END Z-INDEXES ***/
 		
 /*** COLORS ***/
-{background-color:#03EA60;}
+html {background-color:#03EA60;}
 #query,
 .search-result-item p strong { color:#03EA60;}
 
@@ -19,21 +19,19 @@ body{
 
 .u-searchForm-input { background-color: rgba(0, 0, 0, .05) !important; }
 
-html { background-color: #eee; }
-
 .search-footer,
-.search-nav,
+.search-header,
 .u-searchForm-query,
 .u-searchForm-result { background-color: white; }
 .u-submit { color: white; }
 /*** END COLORS ***/
 		
 /*** FONTS ***/
-@font-face{font-family:"OCR A";src:url("/assets/fonts/OCR-A-extended/ocraext.ttf");/*src:url("/assets/fonts/ALPHABETH.eot") format("embedded-opentype"),url("/assets/fonts/ALPHABETH.woff2") format("woff2"),url("/assets/fonts/ALPHABETH.woff") format("woff"),url("/assets/fonts/ALPHABETH.ttf") format("trutype"),url("/assets/fonts/ALPHABETH.svg") format("svg");*/}
+@font-face{font-family:"OCR A";src:url("https://notes.intobinary.org/assets/fonts/OCR-A-extended/ocraext.ttf");/*src:url("https://notes.intobinary.org/assets/fonts/ALPHABETH.eot") format("embedded-opentype"),url("https://notes.intobinary.org/assets/fonts/ALPHABETH.woff2") format("woff2"),url("https://notes.intobinary.org/assets/fonts/ALPHABETH.woff") format("woff"),url("https://notes.intobinary.org/assets/fonts/ALPHABETH.ttf") format("trutype"),url("https://notes.intobinary.org/assets/fonts/ALPHABETH.svg") format("svg");*/}
 body{font-family:"OCR A", serif;}
 {font-family:"Arial Black", sans-serif;}
 		
-.search-nav,
+.search-header,
 .search-footer { text-align: center; }
 
 .u-submit {
@@ -45,7 +43,7 @@ body{font-family:"OCR A", serif;}
 /*** END FONTS ***/
 		
 /*** MEDIA ***/
-html { background-image: url("/assets/images/matrix-black_www-dot-intobinary-dot-org.png"); }
+html { background-image: url("https://notes.intobinary.org/assets/images/matrix-black_www-dot-intobinary-dot-org.png"); }
 html {
 	background-size: 25% !important;
 }
@@ -86,20 +84,20 @@ html {
 .search {
 	width: 100%; height: 100%;
 }
-.search-nav,
+.search-header,
 .u-searchForm,
 .search-footer {
 	width: 75%;
 	margin: 0 auto;
 }
-.search-nav { margin-bottom: 10vh; }
+.search-header { margin-bottom: 10vh; }
 .search-footer,
 .u-searchForm-result { margin-top: 10vh; }
 
 .u-searchForm-query {
 //	margin: 10vh auto;
 }
-.search-nav-h1 img {
+.search-header-h1 img {
 	height: 1.5em; width: auto;
 	vertical-align: middle;
 }
@@ -118,7 +116,7 @@ html {
 @media screen and (max-width:50em){
 	html, body{font-size:14px;}
 	
-	.search-nav,
+	.search-header,
 	.u-searchForm-query,
 	.u-searchForm-result,
 	.search-footer { padding: 1em; }
@@ -131,7 +129,7 @@ html {
 	
 	.u-searchForm-result .u-searchForm-clear {// display: none !important; }
 	
-	.search-nav,
+	.search-header,
 	.u-searchForm-query,
 	.u-searchForm-result,
 	.search-footer { padding: 2em; }
@@ -146,7 +144,7 @@ html {
 		
 /*** LIBRARY ***/
 .is-hidden {
-	display: none;
+//  display: none;
 	background: none;
 }
 
@@ -274,7 +272,7 @@ html {
 	border: 1px solid green;
 }
 
-#search-nav {
+#search-header {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
