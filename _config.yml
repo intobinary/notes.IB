@@ -1,9 +1,18 @@
 collections:
+  drafts:
+    output: true
+    permalink: /drafts/:path/
   notes:
     output: true
     permalink: /:path/
 
 defaults:
+  -
+    scope:
+      path: ""
+      type: "drafts"
+    values:
+      layout: "notes"
   -
     scope:
       path: ""
