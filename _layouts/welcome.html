@@ -41,8 +41,10 @@ layout: default
 			</footer>
 		</main>
 		
-		<section class="hat"><form>
-			<input type="text" autocomplete="given-name" placeholder="First Name" />
+		<section class="hat is-hidden"><form>
+			<div id="log"></div>
+		
+			<input type="text" autocomplete="given-name" placeholder="First Name" onfocus="this.select()" />
 			<input type="text"autocomplete="family-name" placeholder="Last Name" />
 			<input type="text"autocomplete="email" placeholder="Email" />
 			<input type="text"autocomplete="tel" placeholder="Telephone" />
@@ -58,15 +60,42 @@ layout: default
 				width: 100%; height: 100%;
 				background-color: white;
 			}
+			.hat.is-hidden { display: none !important; }
 		</style>
-		<!--
 		<script>
+//			setTimeout(doHat, 10000);
 			doHat();
+
 			function doHat() {
-				alert("Hat!");
-//				document.querySelector(".hat input[autocomplete='given-name']").;
+				var theTag = document.querySelector(".hat input[autocomplete='given-name']");
+				
+				/*
+				if(theTag) {
+					let rect = theTag.getBoundingClientRect();
+
+					let centerX = rect.left + rect.width / 2;
+					let centerY = rect.top + rect.height / 2;
+
+					let elAtPoint = document.elementFromPoint(centerX, centerY);
+					if (elAtPoint) {
+						alert("Here!");
+						elAtPoint.click();
+					}
+				}
+				*/
+
+				/*
+				var theTag = document.querySelector(".hat input[autocomplete='given-name']")
+				theTag.focus();
+				theTag.click();
+				theTag.dispatchEvent(new Event("mousedown", { bubbles: true }));
+				theTag.dispatchEvent(new Event("mouseup", { bubbles: true }));
+				theTag.dispatchEvent(new Event("input", { bubbles: true }));
+				*/
 			}
-		</script>-->
+			
+		</script>
 	
 	<script src="/assets/scripts/notes-dot-intobinary-dot-org.js"></script>
+	
 	<script src="/global.js"></script>
