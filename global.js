@@ -20,9 +20,25 @@ function doB(position) {
 function doMap(vLa, vLo) {
 	fetch(vU)
 		.then(response => response.json())
+		.then(data => {
+			console.log("Here!", data);
+
+			if (Array.isArray(data) && data.length > 0) {
+				console.log(data[0].display_name);
+				alert(data[0].display_name);
+			} else {
+				alert("No results found");
+			}
+		})
+		.catch(err => console.error("Fetch error:", err));
+	
+	/*
+	fetch(vU)
+		.then(response => response.json())
 		.then(data => { alert("Here!");
-			if(data || data.display_name) { console.log(data.display_name); alert(data.display_name); }
+			if(data || data.display_name) { console.log(data[0].display_name); alert(data[0].display_name); }
 		});
+		*/
 }
 function doD() {
 	vLa = localStorage.getItem("vULa");
