@@ -43,5 +43,6 @@ function doD() {
 	vLa = localStorage.getItem("vULa");
 	vLo = localStorage.getItem("vULo");
 	
+	alert(vLa + " =,= " vLo);
 	doMap(vLa, vLo);
 }
