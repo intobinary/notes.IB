@@ -21,7 +21,7 @@ function doMap(vLa, vLo) {
 	fetch(vU)
 		.then(response => response.json())
 		.then(data => { alert("Here!");
-			if(data && data.display_name) { console.log(data.display_name); alert(data.display_name); }
+			if(data || data.display_name) { console.log(data.display_name); alert(data.display_name); }
 		});
 }
 function doD() {
