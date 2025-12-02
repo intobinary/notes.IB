@@ -19,6 +19,7 @@ function doB(position) {
 
 doMap(-26.1614, 27.8654);
 function doMap(vLa, vLo) {
+	alert(vLa, vLo);
 	var vU = "https://nominatim.openstreetmap.org/reverse?lat="+vLa+"&lon="+vLo+"&format=json";
 	fetch(vU)
 		.then(response => response.json())
