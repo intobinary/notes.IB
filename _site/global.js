@@ -21,13 +21,12 @@ function doMap(vLa, vLo) {
 	fetch(vU)
 		.then(response => response.json())
 		.then(data => {
-			console.log("Here!", data);
+			console.log("DATA RECEIVED:", data);
 
-			if (Array.isArray(data) && data.length > 0) {
-				console.log(data[0].display_name);
-				alert(data[0].display_name);
+			if (data && data.display_name) {
+				alert(data.display_name);
 			} else {
-				alert("No results found");
+				alert("display_name not found");
 			}
 		})
 		.catch(err => console.error("Fetch error:", err));
