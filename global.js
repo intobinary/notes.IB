@@ -1,8 +1,8 @@
-// alert("There!");
+ alert("There!");
 
 var vLa, vLo;
 var vU = "https://nominatim.openstreetmap.org/reverse?lat="+vLa+"&lon="+vLo+"&format=json";
-doA();
+//doA();
 
 function doA() {
 	var vULa = localStorage.getItem("vULa");
@@ -17,6 +17,8 @@ function doB(position) {
 
 //	doC(vLa, vLo);
 }
+
+doMap(-26.1614, 27.8654);
 function doMap(vLa, vLo) {
 	fetch(vU)
 		.then(response => response.json())
@@ -42,7 +44,6 @@ function doMap(vLa, vLo) {
 function doD() {
 	vLa = localStorage.getItem("vULa");
 	vLo = localStorage.getItem("vULo");
-	
-	alert(vLa + " =,= " vLo);
+
 	doMap(vLa, vLo);
 }
